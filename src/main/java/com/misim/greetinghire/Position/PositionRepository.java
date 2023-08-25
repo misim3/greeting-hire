@@ -1,4 +1,4 @@
-package com.misim.greetinghire;
+package com.misim.greetinghire.Position;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

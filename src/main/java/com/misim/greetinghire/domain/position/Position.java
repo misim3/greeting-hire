@@ -1,4 +1,4 @@
-package com.misim.greetinghire.Position;
+package com.misim.greetinghire.domain.position;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -12,7 +12,7 @@ import java.util.Date;
 @Getter
 @Setter
 @Entity
-class Position {
+public class Position {
 
     @Id
     @GeneratedValue
@@ -23,8 +23,6 @@ class Position {
     private String type;
     private Date deadline;
     private String url;
-
-    Position() {}
 
     @Builder
     public Position(String company, String name, String experience, String type, Date deadline, String url) {

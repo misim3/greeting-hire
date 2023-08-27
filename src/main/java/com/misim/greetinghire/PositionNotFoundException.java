@@ -1,8 +1,8 @@
 package com.misim.greetinghire;
 
-class PositionNotFoundException extends RuntimeException{
+public class PositionNotFoundException extends RuntimeException{
 
-    PositionNotFoundException(Long id) {
+    public PositionNotFoundException(Long id) {
         super("Could not find position " + id);
     }
 }

@@ -1,5 +1,6 @@
 package com.misim.greetinghire.domain.position;
 
+import com.misim.greetinghire.domain.BaseTimeEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -14,7 +15,7 @@ import java.util.Date;
 @Setter
 @Getter
 @Entity
-public class Position {
+public class Position extends BaseTimeEntity {
 
     @Id
     @GeneratedValue

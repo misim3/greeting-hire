@@ -9,8 +9,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Date;
-
 @NoArgsConstructor
 @Setter
 @Getter
@@ -24,16 +22,14 @@ public class Position extends BaseTimeEntity {
     private String name;
     private String experience;
     private String type;
-    private Date deadline;
     private String url;
 
     @Builder
-    public Position(String company, String name, String experience, String type, Date deadline, String url) {
+    public Position(String company, String name, String experience, String type, String url) {
         this.company = company;
         this.name = name;
         this.experience = experience;
         this.type = type;
-        this.deadline = deadline;
         this.url = url;
     }
 
@@ -45,7 +41,6 @@ public class Position extends BaseTimeEntity {
                 ", name='" + name + '\'' +
                 ", experience='" + experience + '\'' +
                 ", type='" + type + '\'' +
-                ", deadline=" + deadline +
                 ", url='" + url + '\'' +
                 '}';
     }

@@ -16,7 +16,7 @@ public class WebControllerTest {
     @Test
     public void loadAllPage() {
         //when
-        String body = this.restTemplate.getForObject("/", String.class);
+        String body = this.restTemplate.getForObject("/positions", String.class);
 
         //then
         assertThat(body).contains("All Position");

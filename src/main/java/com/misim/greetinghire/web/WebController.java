@@ -1,8 +1,10 @@
 package com.misim.greetinghire.web;
 
 import com.misim.greetinghire.domain.position.PositionRepository;
+import com.misim.greetinghire.service.PositionService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
@@ -11,15 +13,12 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 @AllArgsConstructor
 public class WebController {
 
-    private PositionRepository positionRepository;
+    private PositionService positionService;
 
     @GetMapping("/positions")
-    public String all() {
+    public String main(Model model) {
+        model.addAttribute("position", positionService.findAllDesc());
         return "main";
     }
 
-    @GetMapping("/positions/{id}")
-    public String one() {
-        return "one";
-    }
 }
